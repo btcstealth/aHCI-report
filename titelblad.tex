@@ -1,0 +1,91 @@
+% Dette er LaTeX-versionen af titelbladet for tek-nat-basis-rapporter 2004 efterår
+% Filen kræver:
+% Universitetets logo:  aau-logo.png (for LaTeX) eller aau-logo.ps (for LaTeX)
+% Synopsis: En fil ved navn synopsis.tex
+
+% Udarbejdet af: Hans Hüttel (hans@cs.auc.dk) 21. maj 2003
+% Rettet af Morten Christophersen (mortench@tnb.aau.dk) 30. nov 2004(ændret til nyt design 2004 efterår)
+
+\documentclass[11pt]{article}
+\ifx\pdfoutput\undefined 
+\usepackage[dvips]{graphicx}
+\else
+\usepackage[pdftex]{graphicx} 
+\usepackage{type1cm} \fi
+    \usepackage[ansinew]{inputenc}
+    \usepackage{a4}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{url}
+\begin{document} 
+\thispagestyle{empty}
+\begin{titlepage}
+\begin{nopagebreak}
+{\samepage 
+\begin{tabular}{r}
+\parbox{\textwidth}{  \raisebox{-4mm}{\includegraphics[height=3.2cm]{AAU_UK_STUDENTREPORT_blue_rgb.png}}
+\hfill \parbox{4.9cm}{\begin{tabular}{l}
+{\sf\small \textbf{Cassiopeia}}\\
+{\sf\small  \textbf{House of Computer Science}} \\
+{\sf\small Selma Lagerl�fs Vej 300} \\
+{\sf\small Telephone 99 40 99 40} \\
+{\sf\small Fax 99 40 97 98} \\
+{\sf\small \color{blue}\underline{\url{http://www.cs.aau.dk}}\color{black}}
+\end{tabular}}}
+
+\end{tabular}
+
+\begin{tabular}{cc}
+\parbox{7cm}{
+\begin{description}
+
+\item {\bf Title:} 
+
+Amazon User Experience Evaluation
+  
+%\item {\bf Theme:} 
+%
+%Machine learning algorithms\\
+%Distributed systems
+
+\end{description}
+
+\parbox{8cm}{
+
+\begin{description}
+\item {\bf Project period:}\\
+   DAT7, ... semester 2015\\
+  \hspace{4cm}
+\item {\bf Project group:}\\
+  d707e15 \\
+  \hspace{4cm}
+\item {\bf Members:}\\
+Bjarke Thorn Carstens \\
+Mathias Friis Spaniel \\
+  \hspace{2cm}
+\end{description}
+}
+\begin{description}
+\item {\bf Publications:} 6
+\item {\bf Total pages:}  ? pages
+\item {\bf Appendix pages:} 0 pages
+\item {\bf Ended at:} \today
+\end{description}
+\vfill } &
+\parbox{7cm}{
+  \vspace{.15cm}
+  \hfill 
+  \begin{tabular}{l}
+  {\bf Synopsis:}\bigskip \\
+  \fbox{
+    \parbox{6.5cm}{\bigskip
+     {\vfill{\small \input{synopsis}
+     \bigskip}}
+     }}
+   \end{tabular}}
+\end{tabular}}
+\\ \\
+\noindent{\footnotesize\emph{The content of the report is freely available, but publication (with source-reference) is only possible with an agreement from the authors.}}
+\end{nopagebreak}
+\end{titlepage}
+\end{document}

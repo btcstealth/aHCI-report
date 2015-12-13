@@ -37,6 +37,9 @@
 *.alg
 *.loa
 
+
+# others
+main.pdf
 # achemso
 acs-*.bib
 

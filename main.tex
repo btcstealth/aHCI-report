@@ -1,0 +1,181 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.3 (9/9/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[fleqn]{IOS-Book-Article}
+\usepackage{amsmath}
+\usepackage{booktabs,array}
+\newcolumntype{A}{@{}llccc >{$} r <{$} @{} >{${}} l <{$}@{}}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+
+\usepackage{relsize}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{graphicx}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+%\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+%\usepackage{abstract} % Allows abstract customization
+%\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{pdfpages}
+\usepackage{amssymb}
+%[doi=false,issn=false,url=false,language=false, keywords=false]
+\usepackage{natbib}
+%\usepackage{titlesec} % Allows customization of titles
+%\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+%\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+%\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+%\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+%\usepackage{fancyhdr} % Headers and footers
+%\pagestyle{fancy} % All pages have headers and footers
+%\fancyhead{} % Blank out the default header
+%\fancyfoot{} % Blank out the default footer
+%\fancyhead[C]{Running title $\bullet$ November 2012 $\bullet$ Vol. XXI, No. 1} % Custom header text
+%\fancyfoot[RO,LE]{\thepage} % Custom footer text
+\usepackage{color}
+\newcommand{\bjarke}[1]{\textcolor{red}{[Bjarke: #1]}}
+\newcommand{\mathias}[1]{\textcolor{red}{[Mathias: #1]}}
+\newcommand{\lined}[4]{\draw[pattern = north east lines] (#1,#2) rectangle (#3,#4);}
+\newcommand{\vm}{v_m}
+\newcommand{\vl}{v_l}
+\usetikzlibrary{patterns}
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\input{frontpage.tex}
+\newpage
+
+\includepdf[pages={1}]{titelblad.pdf}
+\newpage
+
+\input{preface.tex}
+\newpage
+
+%\input{resume.tex}
+%\newpage
+
+\pagestyle{plain}
+%\def\thepage{}
+\setcounter{page}{1}
+
+\begin{frontmatter}    
+
+\title{Amazon user experience evaluation}
+
+\author{\fnms{Bjarke Thorn} \snm{Carstens}}, %
+and
+\author{\fnms{Mathias Friis} \snm{Spaniel}}
+
+\address{Department of Computer Science, Aalborg University, Denmark}
+%----------------------------------------------------------------------------------------
+
+
+%\maketitle % Insert title
+
+%\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract} 
+abstract, write abstract
+\end{abstract}
+
+\begin{keyword}
+Amazon, User Experience Evaluation, Attrakdiff, Co-discovery
+\end{keyword}
+\end{frontmatter}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\begin{multicols}{2} % Two-column layout throughout the main article text
+
+\section{Introduction} \label{sec:introduction}
+\input{introduction.tex}
+
+%\lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
+%\lipsum[2-3] % Dummy text
+
+%------------------------------------------------
+
+\section{Experiments} \label{sec:experiments}
+\input{experiments.tex}
+
+%------------------------------------------------
+
+\section{Results} \label{sec:results}
+\input{results.tex}
+
+%------------------------------------------------
+
+\section{Discussion}
+\input{discussion.tex}
+
+%------------------------------------------------
+\section{Conclusion} \label{sec:conclusion}
+\input{conclusion.tex}
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\newpage
+
+\bibliographystyle{unsrt}
+\bibliography{biblo}
+%\bibliographystyle{plainnat}
+
+
+
+%\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+
+%\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+%Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+%\newblock Assortative pairing and life history strategy - a cross-cultural
+ % study.
+%\newblock {\em Human Nature}, 20:317--330.
+ 
+%\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+%\end{multicols}
+
+\end{document}
